@@ -1,6 +1,6 @@
 from datetime import timedelta
 import numpy as np
-from classes.column import Column, date_col, default_columns
+from classes.data_column import DataColumn, date_col, default_columns
 
 
 datedeltas = [timedelta(days=day_cnt)
@@ -8,7 +8,7 @@ datedeltas = [timedelta(days=day_cnt)
 
 
 class Event:
-    def __init__(self, date, description="", quant_columns: list[Column] = default_columns) -> None:
+    def __init__(self, date, description="", quant_columns: list[DataColumn] = default_columns) -> None:
         self.date = date
         self.description = description
         self.columns = quant_columns
